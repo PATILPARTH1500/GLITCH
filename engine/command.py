@@ -1,5 +1,6 @@
 import pyttsx3
 import speech_recognition as sr
+import eel
 
 
 def speak(text):
@@ -11,7 +12,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-
+@eel.expose
 def takecommand():
     r = sr.Recognizer()
     
@@ -34,9 +35,3 @@ def takecommand():
     return query.lower()
 
 
-text = takecommand()
-
-speak(text)
-
-# Test the functions
-speak("I am Glitch. Good morning, Sir.")

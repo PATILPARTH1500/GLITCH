@@ -1,8 +1,8 @@
-# from playsound import playsound
-# import eel
+import os
+import eel 
+from playsound import playsound
 
-# @eel.expose
-# def playAssistantSound():
-#     music_dir = "www\\assets\\audio\\glitchsound.mp3"
-#     playsound(music_dir)
-    
+@eel.expose
+def playAssistantSound():
+    music_dir = "www\\assets\\audio\\glitchaudio.mp3"
+    playsound(music_dir)
